@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+    db:
+      image: postgres:14
+      environment:
+        - POSTGRES_DB=${POSTGRES_DB}
+        - POSTGRES_USER=${POSTGRES_USER}
+        - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      ports:
+        - 5432:5432
+
+    app:
+      build: .
+      image: &bookrecipes bookrecipes
+      ports:
+        - 8000:8000
+      volumes:
+        - ./bookrecipes:/bookrecipes
+      env_file:
+        - .env
+      command: >
+        sh -c 'watchmedo auto-restart --directory=./ --pattern=*.py --recursive -- python manage.py runserver 0.0.0.0:8000'
+#      bash entrypoint.sh
+#  "wait-for-it db:5432 -- python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+      links:
+        - db
+      depends_on:
+        - db
+
