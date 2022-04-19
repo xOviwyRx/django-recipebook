@@ -1,6 +1,7 @@
 # Recipe Book
 
-Recipe list service.
+Recipe Book with filtering on recipe's and ingredient's name.
+The project executes inside docker container.
 
 ## Docker usage
 
