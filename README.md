@@ -66,4 +66,5 @@ python manage.py loaddata ingredient recipe
 
 Project is available on this link http://0.0.0.0:8000
 
-![screenshot of web application](screenshot/recipebook_screen.png?raw=true "Screenshot of web application")
+<img src="screenshots/recipebook_screen.png">
+
