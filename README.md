@@ -1,7 +1,7 @@
 # Recipe Book
 
 Recipe Book with filtering on recipe's and ingredient's name.
-The project executes inside docker container.
+The project executes inside docker container. PostgreSQL is used as a database.
 
 ## Docker usage
 
