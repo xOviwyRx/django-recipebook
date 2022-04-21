@@ -25,7 +25,7 @@ def recipes(request):
                 filter(ingredients__name__icontains=form_search.cleaned_data["ingredient_name"])
     return render(
         request,
-        "main/recipes.html",
+        "main/index.html",
         {
             "recipes": recipes_objects,
             "form": {

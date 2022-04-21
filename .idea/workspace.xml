@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="897b8f48-ee19-42ca-b7a1-81a38511fb1c" name="Changes" comment="Added screenshot to the README.md">
+      <change afterPath="$PROJECT_DIR$/bookrecipes/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookrecipes/bookrecipes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookrecipes/bookrecipes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookrecipes/main/templates/main/none_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookrecipes/main/templates/main/none_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookrecipes/main/templates/main/recipes.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookrecipes/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookrecipes/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookrecipes/main/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +35,7 @@
     <setting file="file://$PROJECT_DIR$/bookrecipes/bookrecipes/settings.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/bookrecipes/main/models.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/bookrecipes/main/templates/main/base.html" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/bookrecipes/main/templates/main/recipes.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/bookrecipes/main/templates/main/index.html" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/bookrecipes/main/views.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -44,12 +49,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;/home/xoviwyrx/PycharmProjects/Geometric Calculator&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "/home/xoviwyrx/PycharmProjects/django-recipebook",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/screenshots" />
