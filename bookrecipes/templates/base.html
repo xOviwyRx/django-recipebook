@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/library/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/library/select2.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.select.css' %}"/>
     {% block extrastyle %}{% endblock %}
     {% block extrahead %}{% endblock %}
 </head>
@@ -18,6 +17,18 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="/">Recipe Book</a>
+        {% block userinfo %}
+        {% if user.is_authenticated %}
+            <div class="ml-auto navbar-brand">{{ user.username }}
+                <a class = "navbar-brand pl-4" href="{% url 'logout' %}">
+                    <img src="{% static '/main/images/logout-icon.png' %}" width="20px" height="20px"/>
+                </a>
+            </div>
+        {% else %}
+        <a class="ml-auto navbar-brand" href="{% url 'login' %}">Log In</a>
+        {% endif %}
+        {% endblock %}
+        </div>
     </nav>
 </header>
 

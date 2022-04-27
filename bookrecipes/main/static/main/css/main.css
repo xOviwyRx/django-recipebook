@@ -17,3 +17,6 @@ td:hover {
 .select2-selection__rendered {
     font-weight: bold;
 }
+body{
+    background-color:red;
+}
