@@ -11,40 +11,45 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
-# import environ
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# ROOT_DIR = environ.Path(__file__) - 4
-# env = environ.Env()
-# env.read_env(ROOT_DIR(".env"))
+ROOT_DIR = environ.Path(__file__) - 4
+env = environ.Env()
+env.read_env(ROOT_DIR(".env"))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-##jouw@6(r9_!4vcjikfznrvnr3#eb1_tr6o4$nby@+pt68c5c'
+SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool("DEBUG", False)
 
-ALLOWED_HOSTS = [
-    '*'
-]
+ENABLE_SSL = env.bool("ENABLE_SSL", False)
+
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
+
+REQUEST_SCHEME = env.dict("REQUEST_SCHEME", default="http")
+
+REQUEST_PORT = env("REQUEST_PORT", default=80)
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'main',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'main.apps.MainConfig',
     'register.apps.RegisterConfig',
     "crispy_forms",
 ]
@@ -85,15 +90,7 @@ WSGI_APPLICATION = 'bookrecipes.wsgi.application'
 
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bookrecipes_db',
-        'USER': 'myuser',
-        'PASSWORD': 'mypass',
-        'HOST': 'db',
-        'PORT': '',
-    }
-    # "default": env.db(),
+    "default": env.db(),
 }
 
 
@@ -143,4 +140,4 @@ LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = "/"
 
-CRISPY_TEMPLATE_PACK="bootstrap4"
+CRISPY_TEMPLATE_PACK = "bootstrap4"

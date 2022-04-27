@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from .models import Recipe
-# from .forms import NameFilterForm, IngredientsFilterForm
 from .forms import NameFilterForm
 
 
