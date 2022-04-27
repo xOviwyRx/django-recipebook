@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="897b8f48-ee19-42ca-b7a1-81a38511fb1c" name="Changes" comment="Add URLconf in the main app directory">
-      <change afterPath="$PROJECT_DIR$/bookrecipes/main/static/main/images/logout-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookrecipes/static/logout-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="897b8f48-ee19-42ca-b7a1-81a38511fb1c" name="Changes" comment="Added login/logout">
+      <change afterPath="$PROJECT_DIR$/bookrecipes/register/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookrecipes/register/templates/register/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookrecipes/register/templates/register/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookrecipes/register/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookrecipes/bookrecipes/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookrecipes/bookrecipes/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookrecipes/bookrecipes/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookrecipes/bookrecipes/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookrecipes/main/static/main/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/bookrecipes/main/static/main/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookrecipes/main/templates/main/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookrecipes/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bookrecipes/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookrecipes/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookrecipes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bookrecipes/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650565951399</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added login/logout">
+      <created>1651067129374</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1651067129374</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,6 +276,7 @@
     <MESSAGE value="Added screenshot's folder and one screenshot" />
     <MESSAGE value="Added screenshot to the README.md" />
     <MESSAGE value="Add URLconf in the main app directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add URLconf in the main app directory" />
+    <MESSAGE value="Added login/logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added login/logout" />
   </component>
 </project>
