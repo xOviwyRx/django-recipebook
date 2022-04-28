@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     {% load static %}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Recipe Book</title>
-
+    <link rel="icon" href="{% static 'base/icons/favicon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/library/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/library/select2.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}"/>
@@ -21,7 +22,7 @@
         {% if user.is_authenticated %}
             <div class="ml-auto navbar-brand">{{ user.username }}
                 <a class = "navbar-brand pl-4" href="{% url 'logout' %}">
-                    <img src="{% static '/main/images/logout-icon.png' %}" width="20px" height="20px"/>
+                    <img src="{% static 'base/images/logout-icon.png' %}" width="20px" height="20px"/>
                 </a>
             </div>
         {% else %}
@@ -59,12 +60,12 @@
         <p class="pt-3">&copy; <a href="tg://resolve?domain=@xLibertaDx">Yurov Andrey</a> {% now 'Y' %}</p>
     </div>
 </footer>
-<script src="{% static '/js/library/jquery-3.5.0.min.js' %}"></script>
-<script src="{% static '/js/library/bootstrap.min.js' %}"></script>
+<!--<script src="{% static '/js/library/jquery-3.5.0.min.js' %}"></script>-->
+<!--<script src="{% static '/js/library/bootstrap.min.js' %}"></script>-->
 {% block extrajs %}
-    <script src="{% static '/js/library/select2.min.js' %}"></script>
-    <script src="{% static '/js/library/select2.ru.js' %}"></script>
-    <script src="{% static '/js/bookrecipes.select.js' %}"></script>
+<!--    <script src="{% static '/js/library/select2.min.js' %}"></script>-->
+<!--    <script src="{% static '/js/library/select2.ru.js' %}"></script>-->
+<!--    <script src="{% static '/js/bookrecipes.select.js' %}"></script>-->
 {% endblock %}
 </body>
 </html>

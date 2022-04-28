@@ -1,47 +1,48 @@
 {% extends 'base.html' %}
 {% load static %}
+
+
+
 {% block form %}
     <form class="js-form">
         <form action="" method="get">
             {{  form_search }}
             <input type="submit" value="Search">
         </form>
-
     </form>
 {% endblock %}
-
-
 {% block content %}
         {% if not recipes %}
             {% include 'main/none_info.html' %}
+        {% else %}
+            {% for recipe in recipes %}
+                <h2>{{ recipe }}</h2>
+                <table class="table table-hover js-table">
+                    <thed>
+                        <tr>
+                            <th scope="col">Ingredients</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thed>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <ul>
+                                    {% for el in recipe.ingredients.all %}
+                                        <li>{{ el.name }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </td>
+                            <td>
+                               {{ recipe.description }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            {% endfor %}
         {% endif %}
-        {% for recipe in recipes %}
-            <h2>{{ recipe }}</h2>
-        <table class="table table-hover js-table">
-            <thed>
-                <tr>
-                    <th scope="col">Ingredients</th>
-                    <th scope="col">Description</th>
-                </tr>
-            </thed>
-            <tbody>
-                <tr>
-                    <td>
-                        <ul>
-                            {% for el in recipe.ingredients.all %}
-                                <li>{{ el.name }}</li>
-                            {% endfor %}
-                        </ul>
-                    </td>
-                    <td>
-                       {{ recipe.description }}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        {% endfor %}
-
 {% endblock %}
+
 
 
 

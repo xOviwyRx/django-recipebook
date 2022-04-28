@@ -17,10 +17,9 @@ import environ
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ROOT_DIR = environ.Path(__file__) - 4
+ROOT_DIR = environ.Path(__file__) - 3
 env = environ.Env()
 env.read_env(ROOT_DIR(".env"))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -130,6 +129,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    BASE_DIR / "bookrecipes/static/",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

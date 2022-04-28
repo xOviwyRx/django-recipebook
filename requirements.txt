@@ -2,3 +2,4 @@ Django>=3.0,<=4.0.2
 psycopg2>=2.8
 register~=0.1
 django-environ>=0.4.5,<0.5
+environ~=1.0
